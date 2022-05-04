@@ -38,4 +38,5 @@
     # only loaded in demonstration mode
     'demo': [
     ],
+    'application': true
 }
