@@ -8,6 +8,7 @@ class BannerConfig(models.Model):
 
     image = fields.Text(string="Hình ảnh")
 
+    # Tạo selection unit(đơn vị) độ dài css
     unit = fields.Selection([
         ('px', 'px'),
         ('%', '%'),
@@ -31,6 +32,7 @@ class BannerConfig(models.Model):
 
     border_height = fields.Float(string="Thiết lập độ dày cho đường viền",
                                  help="Ví dụ: 1.0")
+    # Tạo selection kiểu đường viền css
     border_style = fields.Selection([
         ('dotted', 'Dotted'),
         ('dashed', 'Dashed'),
@@ -67,6 +69,9 @@ class AdvertisingPopups(models.Model):
     _name = "advertising.popups"
     _description = "Cấu hình vị trí hiển thị popups quảng cáo"
 
+    image = =fields.Text(string="Hình ảnh")
+    content = fields.Text(string="Nội dung")
+    link = fields.Char(string="Link nhà cung cấp quảng cáo")
     display_position = fields.Selection([
         ('top', 'Top'),
         ('bottom', 'Bottom'),
