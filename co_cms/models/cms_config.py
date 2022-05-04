@@ -45,8 +45,8 @@ class BannerConfig(models.Model):
         ('none', 'None'),
         ('hidden', 'Hidden')
     ], default="none", string="Chọn kiểu đường viền")
-    border_color = fields.Chart(string="Thiết lập màu cho đường viền",
-                                help="Ví dụ: green; Hoặc dùng mã: #00ff00")
+    border_color = fields.Char(string="Thiết lập màu cho đường viền",
+                               help="Ví dụ: green; Hoặc dùng mã: #00ff00")
 
     border_radius = fields.Float(string="Thiết lập bo tròn cho đường viền",
                                  help="Ví dụ: 15.0")
@@ -69,7 +69,7 @@ class AdvertisingPopups(models.Model):
     _name = "advertising.popups"
     _description = "Cấu hình vị trí hiển thị popups quảng cáo"
 
-    image = =fields.Text(string="Hình ảnh")
+    image = fields.Text(string="Hình ảnh")
     content = fields.Text(string="Nội dung")
     link = fields.Char(string="Link nhà cung cấp quảng cáo")
     display_position = fields.Selection([
