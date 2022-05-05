@@ -29,7 +29,7 @@
     'version': '0.1',
 
     # any module necessary for this one to work correctly
-    'depends': ['base', 'website_sale'],
+    'depends': ['base', 'website_sale', 'product'],
 
     # always loaded
     'data': [
@@ -38,7 +38,9 @@
         'views/category_product_style_view.xml',
         'views/menus.xml',
         'views/product_public_category_view.xml',
-        'views/img_line_views.xml'
+        'views/img_line_views.xml',
+        'views/category_product_display_type_view.xml',
+        'views/product_template_view.xml'
     ],
     # only loaded in demonstration mode
     'demo': [
