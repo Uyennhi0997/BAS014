@@ -8,7 +8,9 @@
                 <form string="Banner">
                 	<group>
 	                	<field name="name"/>
+	                	<field name="style"/>
 	                	<field name="banner_image" widget="image" style="width: 50%; height: 30%;"/>
+	                	<field name="img_line"/>
 	                </group>
                 </form>
             </field>
@@ -26,7 +28,7 @@
 	        <field name='arch' type='xml'>
 	            <tree string='Banner'>
 	                <field name='name'/>
-	                <field name='banner_image'/>
+	                <field name='style'/><z></z>
 	            </tree>
 	        </field>
 	    </record>

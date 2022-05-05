@@ -7,3 +7,14 @@ class Banner(models.Model):
 
     name = fields.Char(string="Tên banner")
     banner_image = fields.Binary(string="Hình ảnh", attachment=True)
+    style = fields.Selection([
+        ('banner', 'Banner'),
+        ('slide', 'Slide')
+    ], default='banner', string='Kiểu')
+    img_line = fields.One2many(
+        'img.line',
+        'slide_id',
+        string='Danh sách hình ảnh',
+        copy=True,
+        auto_join=True
+    )
