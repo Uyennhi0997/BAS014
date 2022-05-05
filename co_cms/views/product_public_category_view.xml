@@ -10,7 +10,7 @@
 	    </record>
 	   
         <record id="action_product_public_category_form" model="ir.actions.act_window">
-        	<field name="name">Category</field>
+        	<field name="name">Category management/ Category</field>
         	<field name="res_model">product.public.category</field>
         	<field name="view_mode">tree,form</field>
         </record>

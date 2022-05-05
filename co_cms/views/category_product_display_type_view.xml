@@ -20,7 +20,7 @@
         </record>
 
 	    <record model='ir.ui.view' id='banner_tree_view'>
-	        <field name='name'>Product Type</field>
+	        <field name='name'>Product management/ Product Type</field>
 	        <field name='model'>category.product.display.type</field>
 	        <field name='arch' type='xml'>
 	            <tree string='Product Type'>
