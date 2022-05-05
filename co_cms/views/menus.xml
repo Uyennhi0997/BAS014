@@ -1,7 +1,10 @@
 <odoo>
 	<data>
 		<menuitem id="main_menu_cms" name="CMS" action="action_banner_form"/>
+
 		<menuitem id="banner_menu" name="Banner" parent="main_menu_cms" action="action_banner_form" sequence="0"/>
-		<menuitem id="category_product_menu" name="Category Product Type" parent="main_menu_cms" action="action_category_product_form" sequence="1"/>
+		<!-- <menuitem id="category_product_menu" name="Category Product Type" parent="main_menu_cms" action="" /> -->
+		<menuitem id="category_menu" name="Category" parent="main_menu_cms" sequence="1"/>
+		<menuitem id="category_style_menu" name="Style" parent="category_menu" action="action_category_product_form" sequence="0"/>
 	</data>
 </odoo>

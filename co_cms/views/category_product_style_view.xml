@@ -7,7 +7,7 @@
             <field name="arch" type="xml">
                 <form string="Category Product Type">
                 	<group>
-	                	<field name="display_style" style="width: 200px;"/>
+	                	<field name="display_style" style="width: 200px"/>
 	                </group>
                 </form>
             </field>

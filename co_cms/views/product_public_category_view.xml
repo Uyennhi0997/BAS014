@@ -1,0 +1,40 @@
+<odoo>
+	<data>
+
+		<!-- 
+ 		<record id="product_public_category_form_view_inherit" model="ir.ui.view">
+            <field name="name">product.public.category.form.view.inherit</field>
+            <field name="model">product.public.category</field>
+            <field name="inherit_id" ref="website_sale.product_public_category_form_view"/>
+            <field name="arch" type="xml">
+                <form string="Category Product Type">
+                	<group>
+	                	<field name="display_style" style="width: 200px;"/>
+	                </group>
+                </form>
+            </field>
+        </record>
+ -->
+	    <record model='ir.ui.view' id='product_tree_view'>
+	        <field name='name'>Product public category</field>
+	        <field name='model'>product.public.category</field>
+        	<field name="inherit_id" ref="website_sale.product_public_category_tree_view"/>
+	        	
+	        <field name="arch" type="xml">
+	            <tree string="Product Public Categories">
+	                <!-- <field name="sequence" widget="handle"/>
+	                <field name="display_name"/>
+	                <field name="website_id" groups="website.group_multi_website"/> -->
+	            </tree>
+	        </field>
+	    </record>
+	   
+        <record id="action_product_public_category_form" model="ir.actions.act_window">
+        	<field name="name">Product public category</field>
+        	<field name="res_model">product.public.category</field>
+        	<field name="view_mode">tree,form</field>
+        </record>
+
+		<menuitem id="product_public_category_menu" name="Product public category" parent="category_menu" action="action_product_public_category_form" sequence="1"/>
+	</data>
+</odoo>

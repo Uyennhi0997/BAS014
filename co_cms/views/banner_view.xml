@@ -28,7 +28,7 @@
 	        <field name='arch' type='xml'>
 	            <tree string='Banner'>
 	                <field name='name'/>
-	                <field name='style'/><z></z>
+	                <field name='style'/>
 	            </tree>
 	        </field>
 	    </record>
