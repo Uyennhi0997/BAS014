@@ -6,7 +6,7 @@ class BannerConfig(models.Model):
     _name = "banner"
     _description = "Cấu hình banner"
 
-    image = fields.Binary(string="Hình ảnh")
+    image = (string="Hình ảnh")
 
     # Tạo selection unit(đơn vị) độ dài css
     unit = fields.Selection([
@@ -69,7 +69,7 @@ class AdvertisingPopups(models.Model):
     _name = "advertising.popups"
     _description = "Cấu hình vị trí hiển thị popups quảng cáo"
 
-    image = fields.Binary(string="Hình ảnh")
+    image = (string="Hình ảnh")
     content = fields.Text(string="Nội dung")
     link = fields.Char(string="Link nhà cung cấp quảng cáo")
     display_position = fields.Selection([
