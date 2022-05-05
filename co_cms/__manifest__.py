@@ -36,7 +36,8 @@
         'security/ir.model.access.csv',
         'views/banner_view.xml',
         'views/category_product_style_view.xml',
-        'views/menus.xml'
+        'views/menus.xml',
+        'views/img_line_views.xml'
     ],
     # only loaded in demonstration mode
     'demo': [

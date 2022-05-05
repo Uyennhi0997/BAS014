@@ -7,10 +7,10 @@ class ImgLine(models.Model):
     name = fields.Char(
         string='Tên hình ảnh',
     )
-    slide_id = fields.Many2one(
-        'banner.banner',
-        string='Slide', required=True, ondelete='cascade', index=True, copy=False
-    )
+    # slide_id = fields.Many2one(
+    #     'banner.banner',
+    #     string='Slide', required=True, ondelete='cascade', index=True, copy=False
+    # )
 
     image = fields.Binary(
         string='Hình ảnh',
