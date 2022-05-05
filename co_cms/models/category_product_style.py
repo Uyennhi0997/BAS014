@@ -9,4 +9,4 @@ class CategoryProductStyle(models.Model):
         ('grid', 'Grid'),
         ('list', 'List'),
         ('slide', 'Slide'),
-    ], default='grid', string="Dạng hiển thị", help="Dạng hiển thị ở trên website hoặc là ứng dụng")
+    ], default='grid', required=True, string="Dạng hiển thị", help="Dạng hiển thị ở trên website hoặc là ứng dụng")

@@ -9,4 +9,4 @@ class CategoryProductDisplayType(models.Model):
         ('grid', 'Grid'),
         ('List', 'List'),
         ('Slide', 'Slide'),
-    ], default="Grid", string="Dạng hiển thị")
+    ], default="grid", required=True, string="Dạng hiển thị")
