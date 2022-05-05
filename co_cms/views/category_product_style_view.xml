@@ -1,0 +1,33 @@
+<odoo>
+	<data>
+		
+ 		<record id="category_product_style_view_form" model="ir.ui.view">
+            <field name="name">category.product.style.view.form</field>
+            <field name="model">category.product.style</field>
+            <field name="arch" type="xml">
+                <form string="Category Product Type">
+                	<group>
+	                	<field name="display_style" style="width: 200px;"/>
+	                </group>
+                </form>
+            </field>
+        </record>
+
+        <record id="action_category_product_form" model="ir.actions.act_window">
+        	<field name="name">Category Product Type</field>
+        	<field name="res_model">category.product.style</field>
+        	<field name="view_mode">tree,form</field>
+        </record>
+
+	    <record model='ir.ui.view' id='banner_tree_view'>
+	        <field name='name'>Category Product Type</field>
+	        <field name='model'>category.product.style</field>
+	        <field name='arch' type='xml'>
+	            <tree string='Banner'>
+	                <field name="display_style"/>
+	            </tree>
+	        </field>
+	    </record>
+	   
+	</data>
+</odoo>

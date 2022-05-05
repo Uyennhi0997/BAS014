@@ -33,10 +33,13 @@
 
     # always loaded
     'data': [
-        # 'security/ir.model.access.csv',
+        'security/ir.model.access.csv',
+        'views/banner_view.xml',
+        'views/category_product_style_view.xml',
+        'views/menus.xml'
     ],
     # only loaded in demonstration mode
     'demo': [
     ],
-    'application': true
+    'application': True
 }
