@@ -40,7 +40,8 @@
         'views/product_public_category_view.xml',
         'views/img_line_views.xml',
         'views/category_product_display_type_view.xml',
-        'views/product_template_view.xml'
+        'views/product_template_view.xml',
+        'views/popups_view.xml'
     ],
     # only loaded in demonstration mode
     'demo': [

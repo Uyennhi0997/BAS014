@@ -12,6 +12,8 @@
 
 		<!-- Product management menu-->
 		<menuitem id="product_menu" name="Product management" parent="main_menu_cms" sequence="2"/>
+
+		
 		
 	</data>
 </odoo>

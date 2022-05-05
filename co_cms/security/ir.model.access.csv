@@ -4,3 +4,4 @@ access_category_product_style,access.category.product.style,model_category_produ
 access_img_line,access.img.line,model_img_line,base.group_user,1,1,1,1
 access_img_line,access.img.line,model_img_line,base.group_user,1,1,1,1
 access_category_product_display_type,access.category.product.display.type,model_category_product_display_type,base.group_user,1,1,1,1
+access_popups_popups,access.popups.popups,model_popups_popups,base.group_user,1,1,1,1

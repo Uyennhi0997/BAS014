@@ -6,14 +6,16 @@
             <field name="model">banner.banner</field>
             <field name="arch" type="xml">
                 <form string="Banner">
-                    <group>
-                        <field name="name"/>
-                        <field name="style" widget="radio"/>
-                        <field name="banner_image" widget="image" style="width: 50%; height: 30%;"
-                               attrs="{ 'invisible':[('style','=','slide')] }"/>
-                        <field name="img_line"
-                               attrs="{ 'invisible':[('style','=','banner')] }"/>
-                    </group>
+                    <sheet>
+                        <group>
+                            <field name="name"/>
+                            <field name="style" widget="radio"/>
+                            <field name="banner_image" widget="image" style="width: 50%; height: 30%;"
+                                   attrs="{ 'invisible':[('style','=','slide')] }"/>
+                            <field name="img_line"
+                                   attrs="{ 'invisible':[('style','=','banner')] }"/>
+                        </group>
+                    </sheet>
                 </form>
             </field>
         </record>

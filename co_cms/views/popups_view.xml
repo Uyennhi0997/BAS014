@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="popups_view_form" model="ir.ui.view">
+            <field name="name">popups.view.form</field>
+            <field name="model">popups.popups</field>
+            <field name="arch" type="xml">
+                <form string="Popups">
+                    <sheet>
+                        <group>
+                            <field name="name"/>
+                            <field name="content" widget="html"/>
+                            <field name="image" widget="image" style="width: 50%; height: 30%;"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="action_popups_form" model="ir.actions.act_window">
+            <field name="name">Popups</field>
+            <field name="res_model">popups.popups</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+
+        <record model='ir.ui.view' id='popups_tree_view'>
+            <field name='name'>Popups Tree View</field>
+            <field name='model'>popups.popups</field>
+            <field name='arch' type='xml'>
+                <tree string='Popups'>
+                    <field name='name'/>
+                    <field name='content'/>
+                    <field name="image"/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- Popups menu-->
+        <menuitem id="popups_menu" name="Popups" parent="main_menu_cms" action="action_popups_form" sequence="3"/>
+    </data>
+</odoo>
