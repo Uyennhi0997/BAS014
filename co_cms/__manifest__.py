@@ -29,7 +29,7 @@
     'version': '0.1',
 
     # any module necessary for this one to work correctly
-    'depends': ['base'],
+    'depends': ['base', 'website_sale'],
 
     # always loaded
     'data': [
@@ -38,5 +38,5 @@
     # only loaded in demonstration mode
     'demo': [
     ],
-    'application': true
+    'application': True
 }
