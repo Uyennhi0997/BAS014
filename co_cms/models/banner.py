@@ -11,10 +11,4 @@ class Banner(models.Model):
         ('banner', 'Banner'),
         ('slide', 'Slide')
     ], default='banner', string='Kiểu')
-    img_line = fields.Many2many(
-        'img.line',
-        # 'slide_id',
-        string='Danh sách hình ảnh',
-        copy=True,
-        auto_join=True
-    )
+    img_line = fields.Many2many('img.line', string='Danh sách hình ảnh', copy=True, auto_join=True)
