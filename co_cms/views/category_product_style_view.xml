@@ -7,7 +7,7 @@
             <field name="arch" type="xml">
                 <form string="Category Product Type">
                 	<group>
-	                	<field name="display_style" style="width: 200px"/>
+	                	<field name="display_styles" style="width: 200px"/>
 	                </group>
                 </form>
             </field>
@@ -19,12 +19,12 @@
         	<field name="view_mode">tree,form</field>
         </record>
 
-	    <record model='ir.ui.view' id='banner_tree_view'>
+	    <record model='ir.ui.view' id='category_product_tree_view'>
 	        <field name='name'>Category Product Type</field>
 	        <field name='model'>category.product.style</field>
 	        <field name='arch' type='xml'>
-	            <tree string='Banner'>
-	                <field name="display_style"/>
+	            <tree string='Category style'>
+	                <field name="display_styles"/>
 	            </tree>
 	        </field>
 	    </record>
