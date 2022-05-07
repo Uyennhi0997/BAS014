@@ -1,19 +1,32 @@
 <odoo>
-	<data>
-		<!-- Root menu-->
-		<menuitem id="main_menu_cms" name="CMS" action="action_banner_form"/>
+    <data>
+        <!-- Root menu-->
+        <menuitem id="main_menu_cms" name="CMS" sequence="0"/>
+        <!--Menu parent-->
+        <!-- Banner menu-->
+        <menuitem id="banner_menu" name="Banner" parent="main_menu_cms" action="action_banner_form" sequence="0"/>
+        <!-- Catgory management menu-->
+        <menuitem id="category_menu" name="Category management" parent="main_menu_cms" sequence="1"/>
+        <!-- Product management menu-->
+        <menuitem id="product_menu" name="Product management" parent="main_menu_cms" sequence="2"/>
+        <!-- Website menu management menu-->
+        <menuitem id="website_menus" name="Website menu" parent="main_menu_cms" action="website_menus_act_window"
+                  sequence="3"/>
+        <!-- Popups menu-->
+        <menuitem id="popups_menu" name="Popups" parent="main_menu_cms" action="action_popups_form" sequence="4"/>
 
-		<!-- Banner menu-->
-		<menuitem id="banner_menu" name="Banner" parent="main_menu_cms" action="action_banner_form" sequence="0"/>
+        <!--End menu parent-->
+        <!--This Menu Item must have a parent and an action-->
+        <!--Product template menu -->
+        <menuitem id="product_template_menu" name="Product" parent="product_menu" action="action_product_template_form"
+                  sequence="0"/>
+<!--        <menuitem id="product_public_category_menu">-->
+        <!--Category management-->
+        <menuitem id="category_style_menu" name="Style" parent="category_menu" action="action_category_product_form"
+                  sequence="0"/>
+        <menuitem id="product_public_category_menu" name="Category" parent="category_menu"
+                  action="action_product_public_category_form" sequence="1"/>
 
-		<!-- Catgory management menu-->
-		<menuitem id="category_menu" name="Category management" parent="main_menu_cms" sequence="1"/>
-		<menuitem id="category_style_menu" name="Style" parent="category_menu" action="action_category_product_form" sequence="0"/>
 
-		<!-- Product management menu-->
-		<menuitem id="product_menu" name="Product management" parent="main_menu_cms" sequence="2"/>
-
-		
-		
-	</data>
+    </data>
 </odoo>
