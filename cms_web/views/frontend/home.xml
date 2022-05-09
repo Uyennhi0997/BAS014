@@ -1,0 +1,71 @@
+<odoo>
+    <template id="temp_home">
+
+
+        <h1>Category</h1>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12">
+                    <a href="#" t-as="item" t-foreach="cate_style">
+                        Dạng hiển thị category: <t t-esc="item.display_styles"></t>
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide" t-as="item" t-foreach="category">
+                    <t t-esc="item.name">
+                    </t>
+                </div>
+            </div>
+            <div class="swiper-button-next">
+            </div>
+            <div class="swiper-button-prev">
+            </div>
+            <div class="swiper-pagination">
+            </div>
+        </div>
+        <hr/>
+
+
+        <h1>Product</h1>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12">
+                    <a href="#" t-as="item" t-foreach="product_style">
+                        Dạng hiển thị product: <t t-esc="item.display_type"></t>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide" t-as="item" t-foreach="product_category">
+                    <t t-esc="item.name">
+                    </t>
+                </div>
+            </div>
+            <div class="swiper-button-next">
+            </div>
+            <div class="swiper-button-prev">
+            </div>
+            <div class="swiper-pagination">
+            </div>
+        </div>
+        <hr/>
+        <!-- <h1>Popups</h1>
+
+
+        <div class="card" style="width: 18rem;" t-as="item" t-foreach="popups">
+          <t t-esc="item.image" t-options='{"widget":"image"}'/>
+          <div class="card-body">
+            <h5 class="card-title"><t t-esc="item.name"/></h5>
+            <p class="card-text"><t t-esc="item.content" t-options='{"widget":"html"}'/></p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+          </div>
+        </div> -->
+
+    </template>
+</odoo>

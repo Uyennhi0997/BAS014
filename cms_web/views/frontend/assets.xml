@@ -1,0 +1,9 @@
+<odoo>
+	<template id="front_end_css">
+		<link rel="stylesheet" href="/cms_web/static/assets/css/layout.css"/>
+	</template>
+	<template id="javascript_front_end">
+		<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+		<script src="/cms_web/static/assets/js/header.js"></script>
+	</template>
+</odoo>

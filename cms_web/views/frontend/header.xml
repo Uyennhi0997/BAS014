@@ -1,0 +1,116 @@
+<odoo>
+    <template id="temp_header">
+
+
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+          <div class="container-fluid">
+            <a class="navbar-brand" href="/">Home</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="/shop">Shop</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/about">About</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+
+
+
+
+        <h1>Category</h1>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12">
+                    <a href="#" t-as="item" t-foreach="cate_style">
+                        Dạng hiển thị category: <t t-esc="item.display_styles"></t>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <t t-as="style" t-foreach="cate_style">
+            <t t-if="style.display_styles == 'slide'">
+                <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide" t-as="item" t-foreach="category">
+                            <t t-esc="item.name">
+                            </t>
+                        </div>
+                    </div>
+                    <div class="swiper-button-next">
+                    </div>
+                    <div class="swiper-button-prev">
+                    </div>
+                    <div class="swiper-pagination">
+                    </div>
+                </div>
+            </t>
+            <t t-if="style.display_styles == 'list'">
+                <div>
+                    <div>
+                        <div  t-as="item" t-foreach="category">
+                            <div class="alert alert-info">
+                                <t t-esc="item.name">
+                                </t>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </t>
+        </t>
+
+
+
+        <h1>Product</h1>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12">
+                    <a href="#" t-as="item" t-foreach="product_style">
+                        Dạng hiển thị product: <t t-esc="item.display_type"></t>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <t t-as="style" t-foreach="product_style">
+            <t t-if="style.display_type == 'slide'">
+                <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide" t-as="item" t-foreach="product_category">
+                            <t t-esc="item.name">
+                            </t>
+                        </div>
+                    </div>
+                    <div class="swiper-button-next">
+                    </div>
+                    <div class="swiper-button-prev">
+                    </div>
+                    <div class="swiper-pagination">
+                    </div>
+                </div>
+            </t>
+            <t t-if="style.display_type == 'list'">
+                <div>
+                    <div>
+                        <div  t-as="item" t-foreach="product_category">
+                            <div class="alert alert-info">
+                                <t t-esc="item.name">
+                                </t>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </t>
+        </t>
+
+        <hr/>
+
+    </template>
+</odoo>
