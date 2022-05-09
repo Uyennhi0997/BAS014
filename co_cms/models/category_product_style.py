@@ -6,7 +6,7 @@ class CategoryProductStyle(models.Model):
     _description = "Thiết lập style cho danh mục sản phẩm"
 
     display_styles = fields.Selection([
-        ('grid', 'Grid'),
-        ('list', 'List'),
-        ('slide', 'Slide'),
+        ('grid', 'grid'),
+        ('list', 'list'),
+        ('slide', 'slide'),
     ], default='grid', required=True, string="Dạng hiển thị", help="Dạng hiển thị ở trên website hoặc là ứng dụng")

@@ -6,6 +6,7 @@ class Banner(models.Model):
 
     name = fields.Char(string="Tên", required=True)
     banner_image = fields.Binary(string="Hình ảnh", attachment=True)
+    position = fields.Many2many('website.menus', string='Vị trí hiển thị')
     style = fields.Selection([
         ('banner', 'Banner'),
         ('slide', 'Slide')

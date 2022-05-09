@@ -9,18 +9,13 @@
                     <sheet>
                         <group>
                             <field name="name"/>
+                            <field name="position" widget="many2many_tags"/>
                             <field name="content" widget="html"/>
                             <field name="image" widget="image" style="width: 50%; height: 30%;"/>
                         </group>
                     </sheet>
                 </form>
             </field>
-        </record>
-
-        <record id="action_popups_form" model="ir.actions.act_window">
-            <field name="name">Popups</field>
-            <field name="res_model">popups.popups</field>
-            <field name="view_mode">tree,form</field>
         </record>
 
 
@@ -36,7 +31,11 @@
             </field>
         </record>
 
-        <!-- Popups menu-->
-        <menuitem id="popups_menu" name="Popups" parent="main_menu_cms" action="action_popups_form" sequence="3"/>
+        <record id="action_popups_form" model="ir.actions.act_window">
+            <field name="name">Popups</field>
+            <field name="res_model">popups.popups</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+        <menuitem id="popups_menus" name="Popups" parent="main_menu_cms" action="action_popups_form" sequence="4"/>
     </data>
 </odoo>

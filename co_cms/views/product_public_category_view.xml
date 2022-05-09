@@ -14,7 +14,5 @@
         	<field name="res_model">product.public.category</field>
         	<field name="view_mode">tree,form</field>
         </record>
-
-		<menuitem id="product_public_category_menu" name="Category" parent="category_menu" action="action_product_public_category_form" sequence="1"/>
 	</data>
 </odoo>

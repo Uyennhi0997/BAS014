@@ -6,7 +6,7 @@ class CategoryProductDisplayType(models.Model):
     _description = "Cấu hình dạng hiển thị category và product"
 
     display_type = fields.Selection([
-        ('grid', 'Grid'),
-        ('List', 'List'),
-        ('Slide', 'Slide'),
+        ('grid', 'grid'),
+        ('list', 'list'),
+        ('slide', 'slide'),
     ], default="grid", required=True, string="Dạng hiển thị")
