@@ -17,12 +17,6 @@
             </field>
         </record>
 
-        <record id="action_popups_form" model="ir.actions.act_window">
-            <field name="name">Popups</field>
-            <field name="res_model">popups.popups</field>
-            <field name="view_mode">tree,form</field>
-        </record>
-
 
         <record model='ir.ui.view' id='popups_tree_view'>
             <field name='name'>Popups Tree View</field>
@@ -34,6 +28,12 @@
                     <field name="image"/>
                 </tree>
             </field>
+        </record>
+
+        <record id="action_popups_form" model="ir.actions.act_window">
+            <field name="name">Popups</field>
+            <field name="res_model">popups.popups</field>
+            <field name="view_mode">tree,form</field>
         </record>
 
     </data>

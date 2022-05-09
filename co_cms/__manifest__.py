@@ -37,6 +37,7 @@
         'views/img_line_views.xml',
         'views/website_menus_view.xml',
         'views/product_template_view.xml',
+        'views/category_product_display_type_view.xml',
         'views/menus.xml',
         'views/popups_view.xml'
     ],

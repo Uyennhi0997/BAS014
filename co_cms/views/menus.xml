@@ -13,14 +13,15 @@
         <menuitem id="website_menus" name="Website menu" parent="main_menu_cms" action="website_menus_act_window"
                   sequence="3"/>
         <!-- Popups menu-->
-        <menuitem id="popups_menu" name="Popups" parent="main_menu_cms" action="action_popups_form" sequence="4"/>
+        <menuitem id="popups_menus" name="Popups" parent="main_menu_cms" action="action_popups_form" sequence="4"/>
 
         <!--End menu parent-->
         <!--This Menu Item must have a parent and an action-->
         <!--Product template menu -->
         <menuitem id="product_template_menu" name="Product" parent="product_menu" action="action_product_template_form"
                   sequence="0"/>
-<!--        <menuitem id="product_public_category_menu">-->
+        <menuitem id="product_style_menu" name="Style" parent="product_menu"
+                  action="action_category_product_display_type_form" sequence="1"/>
         <!--Category management-->
         <menuitem id="category_style_menu" name="Style" parent="category_menu" action="action_category_product_form"
                   sequence="0"/>
