@@ -25,7 +25,7 @@ class CmsWeb(http.Controller):
     def Shop(self, **kw):
         # Banner
         Banner = http.request.env['banner.banner']
-        position = http.request.env['banner.banner'].sudo().search([('position', '=', '/shop')])
+        position = http.request.env['banner.banner'].sudo().search([('position', '=', 'shop')])
         print('=======================Vi tri:', position)
 
         # Popups
@@ -33,9 +33,9 @@ class CmsWeb(http.Controller):
 
         if position:
             return http.request.render('cms_web.temp_shop', {
-                'banner': Banner.search([('position', '=', '/shop'), ('style', '=', 'banner')]),
-                'slide': Banner.search([('position', '=', '/shop'), ('style', '=', 'slide')]),
-                'popups': Popups.search([('position', '=', '/shop')])
+                'banner': Banner.search([('position', '=', 'shop'), ('style', '=', 'banner')]),
+                'slide': Banner.search([('position', '=', 'shop'), ('style', '=', 'slide')]),
+                'popups': Popups.search([('position', '=', 'shop')])
             })
 
         else:
@@ -44,7 +44,7 @@ class CmsWeb(http.Controller):
     @http.route('/about', auth='public')
     def About(self, **kw):
         Banner = http.request.env['banner.banner']
-        position = http.request.env['banner.banner'].sudo().search([('position', '=', '/about')])
+        position = http.request.env['banner.banner'].sudo().search([('position', '=', 'about')])
         print('=======================Vi tri:', position)
 
         # Popups
@@ -52,8 +52,8 @@ class CmsWeb(http.Controller):
 
         if position:
             return http.request.render('cms_web.temp_about', {
-                'banner': Banner.search([('position', '=', '/about')]),
-                'popups': Popups.search([('position', '=', '/about')])
+                'banner': Banner.search([('position', '=', 'about')]),
+                'popups': Popups.search([('position', '=', 'about')])
             })
         else:
             return http.request.render('cms_web.temp_about')
